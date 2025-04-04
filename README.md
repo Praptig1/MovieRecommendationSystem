@@ -1,7 +1,8 @@
 ## Movie Recommendation System
 
 This Python script provides users with movie recommendations based on their preferred genre. By leveraging The Movie Database (TMDB) API, the program fetches high-rated movies from the selected genre and presents a random suggestion.
-Features
+
+Features:
 
 - Genre-Based Recommendations: Users can select from predefined genres to receive tailored movie suggestions.
 
