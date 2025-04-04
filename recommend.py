@@ -1,7 +1,11 @@
 import random
 import requests
+import os
+from dotenv import load_dotenv
 
-API_KEY = 'be5759d6e37a60eab1ade0621290c1ac'
+load_dotenv()
+
+API_KEY = os.environ.get('API_KEY')
 
 # Function to fetch movies based on genre from TMDB API
 
@@ -31,12 +35,12 @@ genre_mapping = {
 }
 
 
-def recommend_random_movie(api_key, genre):
+def recommend_random_movie(API_KEY, genre):
     if genre not in genre_mapping:
         return "Sorry, I don't have recommendations for that genre."
 
     genre_id = genre_mapping[genre]
-    movies = fetch_movies_by_genre(api_key, genre_id)
+    movies = fetch_movies_by_genre(API_KEY, genre_id)
     if not movies:
         return "No movies available for recommendation."
 
